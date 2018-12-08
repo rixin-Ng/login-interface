@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css">
+    <title>登录框</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <div class="logo">
+                <img src="./image/logo2.png" alt="">
+            </div>
+            <div class="content">
+                <h2>登录</h2>
+                <hr>
+                <div class="case">
+                    <ul>
+                        <li>
+                            <input type="text" id="num" class="num" placeholder="请输入手机号">
+                            <label for="num" class="label-image"><img src="./image/user.png" alt=""></label>
+                            <label for="num" class="label-prompt"><p class="text-error">11位手机号</p></label>
+                        </li>
+                        <li>
+                            <input type="text" id="key" class="key" placeholder="请输入密码">
+                            <label for="key" class="label-image"><img src="./image/key.png" alt=""></label>
+                            <label for="key" class="label-prompt"><p class="text-error">首字母大写且不小于六位</p></label>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="error hidden">输入错误，请检查手机号和密码格式</div>
+                <div class="login-tab1">
+                    <div class="tab1-left">
+                        <buttom class="tab1-btn">登录</buttom>
+                        不是会员?
+                        <a href="#">去注册</a>
+                    </div>
+                    <div class="tab1-right">
+                        <a href="#">忘记密码</a>
+                    </div>
+                </div>
+                <div class="login-tab2">
+                    <a href="#">
+                        <img src="./image/weixin.png" alt=""> 微信登录
+                    </a>
+                    <a href="#">
+                        <img src="./image/zhifubao.png" alt=""> 支付宝登录
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        var loginBtn = document.getElementsByClassName('tab1-btn')[0];
+        var num = document.getElementsByClassName('num')[0];
+        var key = document.getElementsByClassName('key')[0];
+        var error = document.getElementsByClassName('error')[0];
+        var oUl = document.getElementsByTagName('ul')[0];
+        var input = document.getElementsByTagName('input');
+        var regNum = /^[1]\d{10}$/g;
+        var regKey = /^[A-Z]\w{5,}/g;
+        var flag = true;
+
+        loginBtn.addEventListener('click', function () {
+            var oNum = num.value;
+            var oKey = key.value;
+            if (regNum.test(oNum) && regKey.test(oKey)) {
+                if (flag) {
+                    loginBtn.innerText = "登陆中...";
+                    input[0].setAttribute('readonly', 'true');
+                    input[1].setAttribute('readonly', 'true');
+                    flag = false;
+                }
+            } else {
+                if (flag) {
+                    error.classList.remove('hidden');
+                    flag = false;
+                }
+            }
+        })
+        oUl.addEventListener('input', function () {
+            loginBtn.innerText = "登录";
+            error.classList.add('hidden');
+            flag = true;
+        }, false)
+    </script>
+</body>
+
+</html>

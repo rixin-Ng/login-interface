@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+    background-image: url("./image/bg.png");
+    background-position: center;
+}
+.main{
+    position: fixed;
+    top: 50px;
+    width: 500px;
+    left: 50%;
+    margin-left: -250px;
+}
+.logo{
+    text-align: center;
+}
+.content{
+    padding: 40px;
+    width: 500px;
+    position: relative;
+    background-color: #fff;
+    border-top: 3px solid #dd3e42;
+    border-top-right-radius: 3px; 
+    border-top-left-radius: 3px; 
+    box-sizing: border-box;
+}
+h2{
+    width: 40px;
+    font-size: 16px;
+    color: #dd3e42;
+     margin: 0 auto;
+     text-align: center;
+}
+hr{
+    width: 40px;
+    height: 2px;
+    margin: 8px auto ;
+    align: center;
+    background-color: #dd3e42;
+    border: none;
+}
+.case ul{
+    width: 100%;
+    margin-top: 40px;
+}
+.case ul li{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+.case li input{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.case li .label-image{
+position: absolute;
+width: 20px;
+height: 20px;
+right: 10px;
+top: 50%;
+margin-top: -10px;
+}
+.case li .label-image img{
+    width: 100%;
+}
+.case li .label-prompt{
+    position: absolute;
+    bottom: -8px;
+    left: 8px;
+    font-size: 14px;
+    background: #fff;
+}
+.case li .text-error{
+    color: orange;
+}
+.content .error{
+   color: #dd3e42;
+   font-size: 14px;
+}
+.login-tab1{
+    position: relative;
+    width: 100%;
+    color: #999;
+    font-size: 14px;
+    margin: 20px 0;
+
+}
+.login-tab1 div{
+    display: inline-block;
+}
+.login-tab1 .tab1-btn{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    background-color: #dd3e42;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+.login-tab1 .tab1-left a{
+        color: #dd3e42;
+}
+.login-tab1 .tab1-right{
+    position: absolute;
+    right: 0;
+    line-height: 40px;
+}
+.login-tab1 .tab1-right a{
+    color: #999;
+}
+.login-tab2{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+.login-tab2 a{
+    color: #999;
+    margin: 0 20px;
+}
+.login-tab2 img{
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.error.hidden{
+    display: none;
+}
